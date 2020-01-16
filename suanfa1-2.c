@@ -1,7 +1,7 @@
-//ÓÃµİ¹éµ÷ÓÃµÄ·½Ê½ÊµÏÖ¶ş·Ö²éÕÒ
+//ç”¨é€’å½’è°ƒç”¨çš„æ–¹å¼å®ç°äºŒåˆ†æŸ¥æ‰¾
 #include <stdio.h>
 #include <stdlib.h>
-// ¶ş·Ö²éÕÒ-Êı¾İÓĞĞò
+// äºŒåˆ†æŸ¥æ‰¾-æ•°æ®æœ‰åº
 int _binary_find(int arr[],int left,int right,int key)
 {
 	int p;
@@ -16,6 +16,7 @@ int _binary_find(int arr[],int left,int right,int key)
 
 int binary_find(int arr[],size_t len,int key)
 {
+	
 	return _binary_find(arr,0,len,key);
 }
 int main()
@@ -28,5 +29,5 @@ int main()
 		printf("%d ",arr[i]);
 	}
 	printf("\n");
-	printf("%d\n",binary_find(arr,10,18)); //ÔÚarr¶ÓÁĞÖĞÉú³É´Ó10¿ªÊ¼µÄµİÔöÖµÎª1µÄ10¸öÊıÖĞ18µÄÎ»ÖÃ
+	printf("%d\n",binary_find(arr,10,18)); //åœ¨arré˜Ÿåˆ—ä¸­ç”Ÿæˆä»10å¼€å§‹çš„é€’å¢å€¼ä¸º1çš„10ä¸ªæ•°ä¸­18çš„ä½ç½®
 }
