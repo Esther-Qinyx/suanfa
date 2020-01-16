@@ -1,4 +1,4 @@
-//ÓÃµÝ¹éµ÷ÓÃÊµÏÖ¿ìËÙÅÅÐò£¬ÓïÑÔ²»ÏÞ£¬²¢Ëæ»úÉú³É²âÊÔËãÀý£¬Í³¼Æ±È½ÏÁ½ÖÖËã·¨Õ¼ÓÃµÄÊ±¼ä¡£
+//ç”¨é€’å½’è°ƒç”¨å®žçŽ°å¿«é€ŸæŽ’åºï¼Œè¯­è¨€ä¸é™ï¼Œå¹¶éšæœºç”Ÿæˆæµ‹è¯•ç®—ä¾‹ï¼Œç»Ÿè®¡æ¯”è¾ƒä¸¤ç§ç®—æ³•å ç”¨çš„æ—¶é—´ã€‚
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -48,9 +48,9 @@ int main()
 {
 	int i,n;
 	int arr[20];
-	printf("ÇëÊäÈëÊý×éµÄÔªËØ¸öÊý n: ");
+	printf("è¯·è¾“å…¥æ•°ç»„çš„å…ƒç´ ä¸ªæ•° n: ");
 	scanf("%d",&n);
-	printf("ÇëÊäÈë%d¸öÕûÊý£º",n);
+	printf("è¯·è¾“å…¥%dä¸ªæ•´æ•°ï¼š",n);
 	for(i=0; i<n; i++)
 	{
 		scanf("%d",&arr[i]);
@@ -62,11 +62,11 @@ int main()
 	}
 	printf("\n");
 	QuickSort(arr,n);
-	printf("ÅÅÐòºó£º");
+	printf("æŽ’åºåŽï¼š");
 	for(i=0; i<n; i++)
 	{
 		printf("%d ",arr[i]);
-	}
+	} 
 	printf("\n");
 	return 0;
 }
