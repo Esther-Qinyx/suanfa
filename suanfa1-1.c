@@ -1,4 +1,4 @@
-//ÓÃÑ­»·ÊµÏÖ¶ş·Ö²éÕÒ
+//ç”¨å¾ªç¯å®ç°äºŒåˆ†æŸ¥æ‰¾
 #include <stdio.h>
 #include <stdlib.h>
 int binary_find(int arr[],size_t len,int key)
@@ -18,18 +18,23 @@ int binary_find(int arr[],size_t len,int key)
 }
 int main()
 {
-	int i,t;
-	int arr[10];
-	printf("ÇëÊäÈëÒ»¸ö¶ÓÁĞ£º");
-	for(i=0; i<10; i++)
+	int i,n,t,a;
+	int arr[20];
+	printf("è¯·è¾“å…¥ä¸€ä¸ªæ•°ç»„çš„é•¿åº¦ï¼š");
+	scanf("%d",&n);
+	printf("è¯·è¾“å…¥ä¸€ä¸ªä»å°åˆ°å¤§æ’åºçš„æ•°ç»„ï¼š");
+	for(i=0; i<n; i++)
 	{
-		scanf("%d",&t);
-		arr[i] = t;
+		scanf("%d",&arr[i]);
+	
 	}
-	for(i=0; i<10; i++)
+	for(i=0; i<n; i++)
 	{
 		printf("%d ",arr[i]);
 	}
 	printf("\n");
-	printf("%d\n",binary_find(arr,10,5)); //ÔÚarr¶ÓÁĞÖĞÉú³É´Ó10¿ªÊ¼µÄµİÔöÖµÎª1µÄ10¸öÊıÖĞ18µÄÎ»ÖÃ
-}
+	printf("è¯·è¾“å…¥éœ€è¦æŸ¥æ‰¾çš„æ•°ï¼š");
+	scanf("%d",&t);
+	printf("å…ƒç´ %dçš„ä½ç½®ä¸ºï¼š",t);
+	a=binary_find(arr,n-1,t);
+	printf("%d\n",a); 
