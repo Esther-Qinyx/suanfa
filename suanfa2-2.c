@@ -1,25 +1,25 @@
-//ÓÃÑ­»·µ÷ÓÃÊµÏÖ¿ìËÙÅÅÐò£¬ÓïÑÔ²»ÏÞ£¬²¢Ëæ»úÉú³É²âÊÔËãÀý
+//ç”¨å¾ªçŽ¯è°ƒç”¨å®žçŽ°å¿«é€ŸæŽ’åºï¼Œè¯­è¨€ä¸é™ï¼Œå¹¶éšæœºç”Ÿæˆæµ‹è¯•ç®—ä¾‹
 #include<stdio.h>
 void quick_sort(int s[], int l, int r)  
 {  
     if (l < r)  
     {  
-        //Swap(s[l], s[(l + r) / 2]); //½«ÖÐ¼äµÄÕâ¸öÊýºÍµÚÒ»¸öÊý½»»» ²Î¼û×¢1  
+        //Swap(s[l], s[(l + r) / 2]); //å°†ä¸­é—´çš„è¿™ä¸ªæ•°å’Œç¬¬ä¸€ä¸ªæ•°äº¤æ¢ å‚è§æ³¨1  
         int i = l, j = r, x = s[l];  
         while (i < j)  
         {  
-            while(i < j && s[j] >= x) // ´ÓÓÒÏò×óÕÒµÚÒ»¸öÐ¡ÓÚxµÄÊý  
+            while(i < j && s[j] >= x) // ä»Žå³å‘å·¦æ‰¾ç¬¬ä¸€ä¸ªå°äºŽxçš„æ•°  
                 j--;    
             if(i < j)   
                 s[i++] = s[j];  
               
-            while(i < j && s[i] < x) // ´Ó×óÏòÓÒÕÒµÚÒ»¸ö´óÓÚµÈÓÚxµÄÊý  
+            while(i < j && s[i] < x) // ä»Žå·¦å‘å³æ‰¾ç¬¬ä¸€ä¸ªå¤§äºŽç­‰äºŽxçš„æ•°  
                 i++;    
             if(i < j)   
                 s[j--] = s[i];  
         }  
         s[i] = x;  
-        quick_sort(s, l, i - 1); // µÝ¹éµ÷ÓÃ   
+        quick_sort(s, l, i - 1); // é€’å½’è°ƒç”¨   
         quick_sort(s, i + 1, r);  
     }  
 }
@@ -27,21 +27,20 @@ int main()
 {
     int i,n;
 	int arr[20];
-	printf("ÇëÊäÈëÊý×éµÄÔªËØ¸öÊý n: ");
+	printf("è¯·è¾“å…¥æ•°ç»„çš„å…ƒç´ ä¸ªæ•° n: ");
 	scanf("%d",&n);
-	printf("ÇëÊäÈë%d¸öÕûÊý£º",n);
+	printf("è¯·è¾“å…¥%dä¸ªæ•´æ•°ï¼š",n);
 	for(i=0; i<n; i++)
 	{
 		scanf("%d",&arr[i]);
 	}
-	
 	for(i=0; i<n; i++)
 	{
 		printf("%d ",arr[i]);
 	}
 	printf("\n");
 	quick_sort(arr,0,n-1);
-	printf("ÅÅÐòºó£º");
+	printf("æŽ’åºåŽï¼š");
 	for(i=0; i<n; i++)
 	{
 		printf("%d ",arr[i]);
