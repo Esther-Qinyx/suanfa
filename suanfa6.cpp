@@ -1,5 +1,5 @@
 
-//±³°üÎÊÌâµÄÌ°ĞÄËã·¨¡£
+//èƒŒåŒ…é—®é¢˜çš„è´ªå¿ƒç®—æ³•ã€‚
 #include <stdio.h>
 #define M 4
 struct node{
@@ -9,7 +9,7 @@ struct node{
 }Node[M],temp;
 float Value,curvalue=0;
 float Weight,curweight=0; 
-//°´ĞÔ¼Û±ÈÅÅĞò
+//æŒ‰æ€§ä»·æ¯”æ’åº
 void sort(){
      int i,j;
 	 for(i=0;i<M-1;i++){
@@ -23,7 +23,7 @@ if((Node[i].value/(float)Node[i].weight)<Node[j].value/(float)Node[j].weight){
 	 }
 }
  
-//×°ÔØÖ÷Òª·½·¨
+//è£…è½½ä¸»è¦æ–¹æ³•
 void load(){
 	int i;
 	for(i=0;i<M;i++){
@@ -36,26 +36,25 @@ void load(){
 		}	
 	}
 }
- 
-//½øĞĞ½á¹ûµÄÊä³ö
+//è¿›è¡Œç»“æœçš„è¾“å‡º
 void putout(){
 	int i;
-	printf("Ñ¡ÖĞÎïÆ·µÄÖØÁ¿·Ö±ğÎª£º");//Ã¿¸öÎïÆ·Ö»ÄÜ·ÅÒ»´Î
+	printf("é€‰ä¸­ç‰©å“çš„é‡é‡åˆ†åˆ«ä¸ºï¼š");//æ¯ä¸ªç‰©å“åªèƒ½æ”¾ä¸€æ¬¡
 	for(i=0;i<M;i++){
 	 	if(Node[i].flag){
           printf("%.2f ",Node[i].weight);
 		}
 	}
-printf("\n×Ü¼ÛÖµÎª:%.2f",curvalue);
+printf("\næ€»ä»·å€¼ä¸º:%.2f",curvalue);
 }
 int main()
 {
 	int i;
-	printf("\nÇëÊäÈë±³°üÈİ»ı£º");
+	printf("\nè¯·è¾“å…¥èƒŒåŒ…å®¹ç§¯ï¼š");
 	scanf("%f",&Weight);
 	for(i=0;i<M;i++)
 	{
-	   printf("ÇëÊäÈëµÚ%d¸öÎïÆ·µÄÖØÁ¿ºÍ¼ÛÖµ£º",i+1);
+	   printf("è¯·è¾“å…¥ç¬¬%dä¸ªç‰©å“çš„é‡é‡å’Œä»·å€¼ï¼š",i+1);
 	   scanf("%f%f",&Node[i].weight,&Node[i].value);
 	}
 
